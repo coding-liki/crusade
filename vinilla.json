@@ -1,0 +1,14 @@
+{
+    "name": "crusade",
+    "vendor": "CodingLiki",
+    "description": "crusade",
+    "repo_url": "github.com/coding-liki/crusade",
+    "dependencies": [
+        "CodingLiki/PhpMvc",
+        "CodingLiki/OoAutoloader",
+        "CodingLiki/Autoloader",
+        "CodingLiki/Configs",
+        "CodingLiki/Db",
+        "CodingLiki/View"
+    ]
+}
