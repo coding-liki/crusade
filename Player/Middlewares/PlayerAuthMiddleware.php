@@ -27,7 +27,7 @@ class PlayerAuthMiddleware extends Middleware
             $jwtData = JWT::decode($jwtToken, self::JWT_KEY, ['RS512']);
 
             $playerId = $jwtData[self::ID_FIELD] ?? 0;
-        } catch(Throwable $t){
+        } catch (Throwable $t) {
             echo "{$t->getMessage()}";
         }
     }
