@@ -1,12 +1,15 @@
 <?php
+
 /**
  * Файл с настройками путей
  */
 
+use Controllers\IndexController;
+use Player\Middlewares\PlayerAuthMiddleware;
 
 /**
  * Список существующих путей
- * 
+ *
  * вид
  * [
  *  <path> : regexp выражение для определения пути
@@ -17,6 +20,6 @@
 $routes = [
     [
         '/',
-        'Controllers\IndexController'
+        IndexController::class
     ]
 ];

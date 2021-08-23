@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+
 use CodingLiki\PhpMvc\App\App;
 
 require_once "./vendor/CodingLiki/OoAutoloader/Autoloader.php";

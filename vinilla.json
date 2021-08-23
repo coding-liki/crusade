@@ -6,7 +6,6 @@
     "dependencies": [
         "CodingLiki/PhpMvc",
         "CodingLiki/OoAutoloader",
-        "CodingLiki/Autoloader",
         "CodingLiki/Configs",
         "CodingLiki/Db",
         "CodingLiki/View"

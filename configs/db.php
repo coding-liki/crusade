@@ -8,7 +8,7 @@
  */
 $main = [
     'type' => 'postgresql',
-    'name' => 'name',
-    'login' => 'login',
-    'pass' => 'password'
+    'name' => 'crusade',
+    'login' => 'crusade',
+    'pass' => 'ikH59Hcsl'
 ];

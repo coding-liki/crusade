@@ -1,8 +1,12 @@
 <?php
+
 namespace Controllers;
 
-class IndexController {
-    public function index(){
-        echo "TATATA\n";
+class IndexController
+{
+    public function index()
+    {
+        echo "fff";
+        view('index');
     }
 }
