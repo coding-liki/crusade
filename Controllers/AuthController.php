@@ -27,7 +27,7 @@ class AuthController
             ]);
         }
 
-        $player = Player::create($name, $login, password_hash($password, PASSWORD_DEFAULT), new DateTime());
+        $player = Player::create(['name' => $name, 'login' => $login, 'passwordhash' => password_hash($password, PASSWORD_DEFAULT), 'createdat' => (new DateTime())->format(DATE_RFC822)]);
 
         return json_encode([
             'success' => true
