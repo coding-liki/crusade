@@ -5,6 +5,8 @@ namespace Player\Middlewares;
 use CodingLiki\PhpMvc\App\Middlewares\Middleware;
 use Firebase\JWT\JWT;
 use Http\Helpers\RequestHelper;
+use Player\Models\Player;
+use Player\PlayerContainer;
 use Throwable;
 
 /**
@@ -14,11 +16,8 @@ class PlayerAuthMiddleware extends Middleware
 {
     private const JWT_KEY = 'something very strange';
     public const ID_FIELD = 'playerId';
-    /**
-     * Undocumented function
-     *
-     * @return void
-     */
+
+
     public function start()
     {
         $jwtToken = $this->getJwtToken();
@@ -27,8 +26,9 @@ class PlayerAuthMiddleware extends Middleware
             $jwtData = JWT::decode($jwtToken, self::JWT_KEY, ['RS512']);
 
             $playerId = $jwtData[self::ID_FIELD] ?? 0;
+            $player = Player::find($playerId);
+            PlayerContainer::setPlayer($player);
         } catch (Throwable $t) {
-            echo "{$t->getMessage()}";
         }
     }
 

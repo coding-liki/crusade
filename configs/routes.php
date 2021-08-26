@@ -4,6 +4,7 @@
  * Файл с настройками путей
  */
 
+use Controllers\AuthController;
 use Controllers\IndexController;
 use Player\Middlewares\PlayerAuthMiddleware;
 
@@ -21,5 +22,10 @@ $routes = [
     [
         '/',
         IndexController::class
+    ],
+    [
+        '/register',
+        AuthController::class,
+        'function' => 'register'
     ]
 ];
